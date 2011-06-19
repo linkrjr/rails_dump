@@ -1,0 +1,1 @@
+require 'rails_dump/helpers/dump_helper'

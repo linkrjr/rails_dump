@@ -1,0 +1,7 @@
+require 'rails_dump/patches/object'
+require 'rails_dump/patches/string'
+require 'rails_dump/patches/fixnum'
+require 'rails_dump/patches/symbol'
+require 'rails_dump/patches/nil_class'
+require 'rails_dump/patches/hash'
+require 'rails_dump/patches/array'
