@@ -13,29 +13,61 @@ module RailsDump
 
       def write_header(script)
 
-        script << '<style>
+        # script << '<style>
+        # 
+        # table.ruby_dump {
+        #   text-align: left;
+        #   font-family: verdana, arial, helvetica, sans-serif; 
+        #   color: #000000;
+        #   font-size: xx-small;
+        # }
+        # table.ruby_dump td, table.ruby_dump th { padding: 3px; vertical-align: top; }
+        # 
+        # /* Array */
+        # .array-table { background-color: #006600; }
+        # .array-table thead th { color: #fff; background-color: #009900; padding:5px; }
+        # .array-table tbody td { background-color: #ffffff; }
+        # .array-table tbody td.key { background-color: #ccffcc; }
+        # 
+        # /* YAML */
+        # .yaml-table { background-color:#000066; }
+        # .yaml-table thead th { background-color:#FFFFFF; }
+        # .yaml-table tbody td { background-color:#000099; }
+        # .yaml-table tbody td.key { background-color:#CCCCFF; }
+        # 
+        # </style>' 
 
-        table.ruby_dump {
-          text-align: left;
-          font-family: verdana, arial, helvetica, sans-serif; 
-          color: #000000;
-          font-size: xx-small;
-        }
-        table.ruby_dump td, table.ruby_dump th { padding: 3px; vertical-align: top; }
+       script << '<style>
+        	table.ruby_dump {
+        		text-align: left;
+        		font-family: verdana, arial, helvetica, sans-serif; 
+        		color: #000000;
+        		font-size: xx-small;
+        	}
+        	table.ruby_dump td, table.ruby_dump th { padding: 3px; vertical-align: top; }
 
-        /* Array */
-        .array-table { background-color: #006600; }
-        .array-table thead th { color: #fff; background-color: #009900; padding:5px; }
-        .array-table tbody td { background-color: #ffffff; }
-        .array-table tbody td.key { background-color: #ccffcc; }
+        	.array-table { background-color: #006600; }
+        	.array-table thead th { color: #fff; background-color: #009900; padding:5px; }
+        	.array-table tbody td { background-color: #ffffff; }
+        	.array-table tbody td.key { background-color: #ccffcc; }
 
-        /* YAML */
-        .yaml-table { background-color:#000066; }
-        .yaml-table thead th { background-color:#FFFFFF; }
-        .yaml-table tbody td { background-color:#000099; }
-        .yaml-table tbody td.key { background-color:#CCCCFF; }
+        	.hash-table { background-color: #0000CC; }	
+        	.hash-table thead th { color: #fff; background-color: #4444CC; padding:5px;}
+        	.hash-table tbody td { background-color: #ffffff; }
+        	.hash-table tbody td.key { background-color: #CCDDFF; }
 
-        </style>' 
+
+        	.object-table { background-color: #FF0000; }
+        	.object-table thead th { color: #fff; background-color: #FF4444; padding:5px; }
+        	.object-table tbody td { background-color: #ffffff; }
+        	.object-table tbody td.key { background-color: #FF99AA; }						
+
+        	.method-table { background-color: #AA4400; }
+        	.method-table thead th { color: #fff; background-color: #CC6600; padding:5px; }
+        	.method-table tbody td { background-color: #ffffff; }
+
+        	.arguments-table th { font-style: italic;}
+        </style>'
 
         @inited = true    
 
