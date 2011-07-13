@@ -13,9 +13,12 @@ Gem::Specification.new do |s|
   s.description = %q{RailsDump prints out an html version of your variables}
 
   s.rubyforge_project = "rails_dump"
-
+  
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
+  
+  s.add_dependency('activesupport')
+
 end

@@ -1,8 +1,8 @@
 class Array
-  def to_dump
-    html = "<table class='ruby_dump array-table'><thead><td colspan='2'>#{self.class}</td></thead><tbody>"
+  def write_dump(label="")
+    html = "<table class='array-table'><thead><tr><th colspan='2' class='array-th'>#{label} :#{self.class}</th></tr></thead><tbody>"
     self.each_with_index do |value, index|
-      html += "<tr><td class='key'>#{index}</td><td>#{value}</td></tr>"
+      html += "<tr><th class='array-key'>#{index}</th><td class='array-td'>#{value.to_dump}</td></tr>"
     end
     html += "</tbody></table>"
   end

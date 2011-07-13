@@ -1,10 +1,9 @@
 class Hash
-  def to_dump
-    html = "<table class='ruby_dump'><thead><td colspan=2 class='RdBug_HashHeader'>#{self.class}</td></thead>"
+  def write_dump(label="")
+    html = "<table class='hash-table'><thead><tr><th colspan='2' class='hash-th'>#{label} :#{self.class}</th></tr></thead>"
     self.each_pair do |k, v|
-      html += "<tr><td class='RdBug_HashKey'>#{k.to_dump}</td><td>#{v.to_dump}</td></tr>"
+      html += "<tr><th class='hash-key'>#{k.to_dump}</th><td class='hash-td'>#{v.to_dump}</td></tr>"
     end
     html += "</table>"
-    super(html)
   end
 end
