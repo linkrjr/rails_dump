@@ -23,5 +23,4 @@ You can dump a variable set in your controller in your views using the following
 TODO
 ===========
 
-* Improve the object dump, for now it is only dumping the class name, it has to display methods and properties/values
-* Improve the CSS, it some times breaks when mixed with the layout css 
+* Dump object properties/values
