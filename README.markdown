@@ -24,3 +24,4 @@ TODO
 ===========
 
 * Dump object properties/values
+* Build a Dump Version of Module objects
