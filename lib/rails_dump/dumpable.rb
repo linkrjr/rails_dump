@@ -4,7 +4,7 @@ module RailsDump
     def to_dump(label="")
       write_dump(label)
     end
-    
+
     def dump_instance_methods
       (self.class.instance_methods - self.class.superclass.instance_methods).sort.each do |m|
         yield m

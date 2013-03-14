@@ -1,5 +1,5 @@
 class Fixnum
-  def to_dump
+  def write_dump(label="")
     self
   end
 end

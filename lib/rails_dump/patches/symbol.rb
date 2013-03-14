@@ -1,5 +1,5 @@
 class Symbol
-  def to_dump
-    self
+  def write_dump(label="")
+    self.to_s
   end
 end

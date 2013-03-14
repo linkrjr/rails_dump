@@ -1,5 +1,5 @@
 class String
-  def to_dump
-    self
+  def write_dump(label="")
+    to_s
   end
 end
